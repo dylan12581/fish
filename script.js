@@ -1,11 +1,11 @@
 const BIRTHDAY_PAGE = {
-  friendName: "亲爱的朋友",
+  friendName: "友人",
   birthdayDate: "5月20日",
   title: "生日快乐",
   heroMessage:
     "愿你今天像站在雪山顶看见日出一样，忽然觉得所有勇气、光和喜欢的事，都正在向你靠近。",
   mainWish:
-    "好好收下所有祝福。愿你永远保有翻过高山的勇气，也能在起风的时候找到可以休息的小营地。生日快乐，愿你被认真喜欢，被世界温柔以待。",
+    "好好收下所有祝福。愿你永远保有翻过高山的勇气，也能在起风的时候找到可以休息的小营地。生日快乐！",
   surpriseIntro: "山顶营地里，有几位原创小伙伴也想把祝福送给你。",
   surpriseWish:
     "他们说：今天不赶路，不冲刺，也不用证明什么。今天只负责快乐，负责被祝福，负责相信自己值得很多很多好事。",
@@ -23,7 +23,7 @@ const BIRTHDAY_PAGE = {
     "新的一岁，愿你被世界温柔偏爱，平安喜乐，万事顺心，也愿你早日遇见那个刚好合适、能好好珍惜你的人",
     "无论如何，新岁已至，生日快乐！放下心里的执念和难过，和过去的不愉快好好说再见，往后平安顺遂，满心皆是美好，岁岁无忧～",
     "自强不息的青春万岁！厚德载物的青春万岁！加油，奥利给！",
-    "在困难面前，就让意志带你杀出重围吧！",
+    "在困难面前，请让意志带你杀出重围吧！",
   ],
 };
 
@@ -55,7 +55,7 @@ const bindInteractions = () => {
     const isOpening = surpriseCast.hidden;
     surpriseCast.hidden = !isOpening;
     surpriseButton.setAttribute("aria-expanded", String(isOpening));
-    surpriseButton.textContent = isOpening ? "收起小彩蛋" : "打开小彩蛋";
+    surpriseButton.textContent = isOpening ? "收起小祝福" : "打开小祝福";
 
     if (isOpening) {
       surpriseCast.scrollIntoView({ behavior: getScrollBehavior(), block: "center" });
@@ -140,7 +140,7 @@ const bindFooterRotation = () => {
 
 const initBirthdayPage = () => {
   document.title = `${BIRTHDAY_PAGE.title} · ${BIRTHDAY_PAGE.birthdayDate} - ${BIRTHDAY_PAGE.friendName}`;
-  setText("recipientLine", `给${BIRTHDAY_PAGE.friendName}`);
+  setText("recipientLine", `致${BIRTHDAY_PAGE.friendName}`);
   setText("heroTitle", BIRTHDAY_PAGE.title);
   setText("birthdayDateLine", BIRTHDAY_PAGE.birthdayDate);
   setText("heroMessage", BIRTHDAY_PAGE.heroMessage);
