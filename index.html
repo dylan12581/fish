@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A quiet fan-made birthday page with an original pixel snow-mountain scene."
+    />
+    <title>生日快乐!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero" id="top">
+        <div class="sky-scene" aria-hidden="true">
+          <span class="star star-a"></span>
+          <span class="star star-b"></span>
+          <span class="star star-c"></span>
+          <span class="star star-d"></span>
+          <span class="star star-e"></span>
+          <span class="aurora"></span>
+          <span class="snowflake snow-a"></span>
+          <span class="snowflake snow-b"></span>
+          <span class="snowflake snow-c"></span>
+          <span class="snowflake snow-d"></span>
+          <span class="snowflake snow-e"></span>
+          <div class="mountain mountain-back"></div>
+          <div class="mountain mountain-mid"></div>
+          <div class="mountain mountain-front"></div>
+          <div class="pixel-trail">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <span
+          class="moon-note"
+          tabindex="0"
+          role="img"
+          aria-label="2026年5月20日，娥眉月，照亮度17.8%，月龄4.1天"
+          aria-describedby="moonTooltip"
+        >
+          <span class="moon" aria-hidden="true"></span>
+          <span class="moon-tooltip" id="moonTooltip" role="tooltip">
+            <span class="moon-tooltip-title">娥眉月 · 2026年5月20日</span>
+            <span class="moon-tooltip-grid">
+              <span>月出 10:19 · 63.6°</span>
+              <span>中天 16:38 · 65.2°</span>
+              <span>月落 22:54 · 294.9°</span>
+              <span>目视星等 -9.6</span>
+              <span>照亮度 17.8%</span>
+              <span>月龄 4.1 天</span>
+              <span>大小 0° 33' 16.6"</span>
+            </span>
+            <span class="moon-tooltip-copy">
+              月亮周期的第二阶段，发生在新月和上弦月之间。月亮逐渐变亮，呈现薄薄的新月形态，随后被照亮的区域会慢慢扩大。
+            </span>
+          </span>
+        </span>
+
+        <div class="music-control">
+          <button
+            class="music-toggle"
+            type="button"
+            id="musicToggle"
+            aria-pressed="false"
+            aria-label="播放背景音乐"
+          >
+            <span class="music-switch" aria-hidden="true"></span>
+            <span id="musicToggleText">音乐 关</span>
+          </button>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow" id="recipientLine">给亲爱的朋友</p>
+          <div class="hero-title-line">
+            <h1 id="heroTitle">生日快乐</h1>
+            <span class="title-note">我记性不好,日期记错了别怪我哈哈</span>
+          </div>
+          <p class="date-chip" id="birthdayDateLine">5月20日</p>
+          <p class="hero-message" id="heroMessage">
+            愿你今天被温柔包围，也愿接下来的每一段路，都有光、勇气和喜欢的事陪着你。
+          </p>
+          <button class="primary-action" type="button" id="openGiftButton">
+            开启礼物
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="summit section-band" id="letter" aria-labelledby="letterTitle">
+          <div class="section-inner summit-layout">
+            <div class="summit-scene" aria-hidden="true">
+              <img
+                class="scene-art summit-art"
+                src="assets/celeste-strawberry.jpg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <article class="letter-card">
+              <p class="eyebrow">Summit Letter</p>
+              <h2 id="letterTitle">今天的登山口袋任务</h2>
+              <p id="mainWish">
+                好好收下所有祝福。愿你永远保有翻过高山的勇气，也能在累的时候找到安静发光的小角落。生日快乐，愿你被认真喜欢，被世界温柔以待。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="camp section-band" aria-labelledby="surpriseTitle">
+          <div class="section-inner camp-layout">
+            <div class="surprise-panel">
+              <p class="eyebrow">Secret Camp</p>
+              <h2 id="surpriseTitle">还有一件小事</h2>
+              <p id="surpriseIntro">山顶营地里，有几位原创小伙伴也想把祝福送给你。</p>
+              <button
+                class="secondary-action"
+                type="button"
+                id="surpriseButton"
+                aria-expanded="false"
+                aria-controls="surpriseCast"
+              >
+                打开小彩蛋
+              </button>
+            </div>
+          </div>
+
+          <div class="section-inner surprise-cast" id="surpriseCast" hidden>
+            <div class="illustration-row" aria-label="她喜欢的角色和游戏插图">
+              <figure class="illustration-card crop-hollow" tabindex="0">
+                <img
+                  src="assets/hollow-knight.png"
+                  alt="Hollow Knight 插图"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>奥力给小骑士</figcaption>
+                <span class="hover-blessing">心怀纯粹、奔赴热爱</span>
+              </figure>
+              <figure class="illustration-card crop-celeste" tabindex="0">
+                <img
+                  src="assets/celeste-summit.png"
+                  alt="Celeste 雪山插图"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>玛德琳</figcaption>
+                <span class="hover-blessing">翻越山海、永远勇敢</span>
+              </figure>
+              <figure class="illustration-card emma-card" tabindex="0">
+                <img
+                  src="assets/emma-gardener.jpg"
+                  alt="第五人格园丁艾玛插图"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>园丁艾玛</figcaption>
+                <span class="hover-blessing">晒晒太阳~采采花~</span>
+              </figure>
+            </div>
+            <p id="surpriseWish">
+              他们说：今天只负责快乐，负责被祝福，负责相信自己值得。
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p id="footerMessage" class="footer-rotator">今天只负责开心，不负责赶路。</p>
+      </footer>
+    </div>
+
+    <audio id="backgroundMusic" preload="none" loop></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
